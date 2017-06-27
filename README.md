@@ -15,34 +15,34 @@ Add the following to your `composer.json` file then update your composer as norm
 
     {
         "require" : {
-            "orphans/git-deploy-laravel" : "dev-master"
+            "crisposs/deploy-laravel" : "dev-master"
         }
     }
 
 Or run:
 
-    composer require orphans/git-deploy-laravel
+    composer require crisposs/deploy-laravel
 
 ### Step 2
 
 Add the following line to you providers in `config/app.php`:
 
-    Orphans\GitDeploy\GitDeployServiceProvider::class,
+    CrisPossa\GitDeploy\GitDeployServiceProvider::class,
 
 ### Step 3
 
-Add the _/git-deploy_ route to CSRF exceptions so your repo's host can send messages to your project.
+Add the _/deploy_ route to CSRF exceptions so your repo's host can send messages to your project.
 
 
 In file in `app/Http/Middleware/VerifyCsrfToken.php` add:
 
     protected $except = [
-        'git-deploy',
+        'deploy',
     ];
 
 ## Usage
 
-Add a webhook for http://your.website.url/git-deploy to your project in GitHub/GitLab and this package will take care of the rest. The webhook should fire on push-events.
+Add a webhook for http://your.website.url/deploy to your project in GitHub/GitLab and this package will take care of the rest. The webhook should fire on push-events.
 
 Your website will automatically receive POST messages from the repo manager and perform a Git pull.
 
@@ -52,7 +52,7 @@ In most cases the package will find the correct Git repository and Git executabl
 
 To add custom configuration run:
 
-    php artisan vendor:publish --provider="Orphans\GitDeploy\GitDeployServiceProvider"
+    php artisan vendor:publish --provider="CrisPossa\GitDeploy\GitDeployServiceProvider"
 
 Then edit `/config/gitdeploy.php`, which has been well commented.
 
