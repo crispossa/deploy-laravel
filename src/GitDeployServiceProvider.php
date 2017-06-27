@@ -2,7 +2,8 @@
 
 namespace Orphans\GitDeploy;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class GitDeployServiceProvider extends ServiceProvider
 {
@@ -11,7 +12,7 @@ class GitDeployServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
         $this->publishes([
             __dir__ . '/../config/gitdeploy.php' => config_path('gitdeploy.php')
