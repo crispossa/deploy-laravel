@@ -1,6 +1,6 @@
 <?php
 
-namespace Orphans\GitDeploy\Http;
+namespace CrisPossa\GitDeploy\Http;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
