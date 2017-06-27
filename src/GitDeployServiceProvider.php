@@ -1,6 +1,6 @@
 <?php
 
-namespace Orphans\GitDeploy;
+namespace CrisPossa\GitDeploy;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
