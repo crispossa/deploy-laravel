@@ -1,10 +1,10 @@
 {
-    "name": "orphans/git-deploy-laravel",
+    "name": "crisposs/deploy-laravel",
     "description": "Helps automate the deployment of projects onto servers by utilising Git web hooks.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Orphans\\GitDeploy\\": "src"
+            "CrisPossa\\GitDeploy\\": "src"
         }
     },
     "require": {
