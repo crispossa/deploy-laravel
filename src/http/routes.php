@@ -1,3 +1,3 @@
 <?php
 
-Route::post('git-deploy', 'CrisPossa\GitDeploy\Http\GitDeployController@gitHook');
+Route::post('deploy', 'CrisPossa\GitDeploy\Http\GitDeployController@gitHook');
